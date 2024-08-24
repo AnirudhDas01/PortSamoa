@@ -3,43 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HomePage</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- navbar start -->
-    <header class="shadow-2xl z-10 relative">
-        <!-- add image of the graphic -->
-        <img src="" alt="">
+    <!-- Navbar start -->
+    <header class="shadow-2xl z-20 relative">
         <nav class="w-full h-[50px] bg-[#21235e]">
-            <div class="w-[80%] mx-auto flex justify-between">
-                <!-- add logo of port samoa, and a hamburger -->
+            <div class="w-[80%] mx-auto flex justify-between items-center h-full">
                 <div class="text-white sm:font-bold font-semibold text-sm sm:p-[12px] p-[5px] py-[10px]">
-                    <a href=""></a>
+                    <a href="#" aria-label="Homepage"></a>
                     <h3 class="sm:block hidden">Inter-Island Travel American Samoa</h3>
                 </div>
-                <!-- sign in and create new account button  -->
                 <div class="p-[6px] sm:gap-3 gap-1 flex text-sm font-semibold">
-                    <a href="" class="bg-white text-blue-500 p-2 px-[20px] text-[14px] rounded-md hover:bg-blue-500 hover:text-white duration-300">Login</a>
-                    <a href="" class="text-white bg-blue-500 p-2 px-[20px] text-[14px] rounded-md hover:bg-blue-600 duration-300"><span class="text-nowrap">Create New Account</span></a>
+                    <a href="#" class="bg-white text-blue-500 p-2 px-[20px] text-[14px] rounded-md hover:bg-blue-500 hover:text-white duration-300">Login</a>
+                    <a href="#" class="text-white bg-blue-500 p-2 px-[20px] text-[14px] rounded-md hover:bg-blue-600 duration-300">Create New Account</a>
                 </div>
             </div>
         </nav>
     </header>
-    <!-- navbar ends -->
-    <!-- welcome Department of port Administration section -->
-    <section class="h-[400px] shadow-xl w-full bg-slate-50">
-        <div class="w-[80%] h-full  bottom-1 mx-auto flex flex-col justify-end sm:p-6 p-4">
-            <h1 class="text-[#21235e] text-[60px] font-bold align-bottom">Welcome</h1>
-            <h1 class="text-[#21235e] text-[40px] font-bold">Department of Port Administration </br> Inter-Island Ferry Services
-            </h1>
+    <!-- Navbar ends -->
+
+    <!-- Welcome Department of Port Administration section -->
+    <section class="sm:h-[400px] h-[300px] w-full bg-slate-50 shadow-2xl z-10 relative">
+        <div class="w-[60%] h-full mx-auto flex flex-col justify-end sm:p-6 p-4">
+            <h1 class="text-[#21235e] sm:text-[60px] text-[40px] font-bold">Welcome</h1>
+            <h2 class="text-[#21235e] sm:text-[40px] text-[20px] font-bold">Department of Port Administration<br> Inter-Island Ferry Services</h2>
         </div>
     </section>
-    <!-- welcome Department of port Administration section ends  -->
-    <!-- Booking Managetrips Schedule Vessel Tracking starts -->
-    <section>
+    <!-- Welcome Department of Port Administration section ends -->
 
-     </section>
-    <!-- Booking Managetrips Schedule Vessel Tracking ends -->
+    <!-- Booking Manage Trips Schedule Vessel Tracking starts -->
+    <section class="h-auto px-4 py-6">
+        <div class="mx-auto flex flex-col w-full">
+            <!-- Navigation tabs -->
+            <div class="grid sm:grid-cols-4 sm:m-8 m-4 gap-2 mb-4">
+                <a href="#" class="min-h-[65px] flex items-center justify-center hover:underline bg-[#21235e] text-white font-semibold text-xl">Book</a>
+                <a href="#" class="bg-slate-200 min-h-[65px] flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 font-semibold">Manage Trips</a>
+                <a href="#" class="bg-slate-200 min-h-[65px] flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 font-semibold">Schedule</a>
+                <a href="#" class="bg-slate-200 min-h-[65px] flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 font-semibold">Vessel Tracking</a>
+            </div>
+
+            <!-- Main content area -->
+            <div class="flex gap-4">
+                <!-- Left side (radio buttons and select elements) -->
+                <div class="flex flex-col w-1/3 gap-4 ">
+                    <div class="flex gap-2 text-white">
+                        <!-- Added unique IDs for toggle functionality -->
+                        <a href="#" id="domestic-link" class="bg-slate-200 flex items-center justify-center text-xl p-2 px-2 text-blue-500 rounded-full hover:bg-[#21235e] hover:text-white duration-300">Domestic</a>
+                        <a href="#" id="international-link" class="bg-slate-200 flex items-center justify-center text-xl p-2 px-2 text-blue-500 rounded-full hover:bg-[#21235e] hover:text-white duration-300">International</a>
+                    </div>
+                    <div class="flex flex-col gap-4" id="domestic">
+                        <div class="flex gap-2 text-white mt-4 items-center">
+                            <input id="radio-one-way" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-one-way">
+                            <label for="radio-one-way" id="label-one-way" class="text-xl text-gray-900 text-wrap">One Way</label>
+                            <input id="radio-charter" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-charter">
+                            <label for="radio-charter" id="label-charter" class="text-xl text-gray-900">Charter</label>
+                            <input id="radio-cruise" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-cruise">
+                            <label for="radio-cruise" id="label-cruise" class="text-xl text-gray-900">Cruise</label>
+                        </div>
+                        <!-- Domestic content -->
+                        <div>
+                            <label for="from" class="block mb-2 text-lg text-black">From</label>
+                            <select id="from" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg">
+                                <option value="US">xPortNamex xIslandx</option>
+                                <option value="CA">Pago Pago, Tutuila</option>
+                                <option value="FR">Ta'u</option>
+                                <option value="US">xPortNamex xIslandx</option>
+                            </select>
+                            <div class="my-3"></div>
+                            <label for="to" class="block mb-2 text-lg text-black">To</label>
+                            <select id="to" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg">
+                                <option value="US">xPortNamex xIslandx</option>
+                                <option value="CA">Pago Pago, Tutuila</option>
+                                <option value="FR">Ta'u</option>
+                                <option value="US">xPortNamex xIslandx</option>
+                            </select>
+                            <div class="my-12"></div>
+                            <div class="flex items-center relative w-auto">
+                                <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 w-[80%] shadow-md" value="Search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%] h-auto flex flex-col justify-center" id="international" style="display: none;">
+                    <!-- Initially hidden international content -->
+                    <div class="flex gap-5 text-white mt-4 items-center">
+                        <input id="radio-one-way-intl" type="radio" name="travel-type-intl" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-one-way-intl">
+                        <label for="radio-one-way-intl" id="label-one-way-intl" class="text-xl text-gray-900 text-wrap">One Way</label>
+                        <input id="radio-charter-intl" type="radio" name="travel-type-intl" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-charter-intl">
+                        <label for="radio-charter-intl" id="label-charter-intl" class="text-xl text-gray-900">Charter</label>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <form action="">
+                            <label for="from-intl" class="block mb-2 text-lg text-black">From</label>
+                            <select id="from-intl" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg">
+                                <option value="US">xPortNamex xIslandx</option>
+                                <option value="CA">Pago Pago, Tutuila</option>
+                                <option value="FR">Ta'u</option>
+                                <option value="US">xPortNamex xIslandx</option>
+                            </select>
+                        </form>
+                        <form action="">
+                            <label for="to-intl" class="block mb-2 text-lg text-black">To</label>
+                            <select id="to-intl" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg">
+                                <option value="US">xPortNamex xIslandx</option>
+                                <option value="CA">Pago Pago, Tutuila</option>
+                                <option value="FR">Ta'u</option>
+                                <option value="US">xPortNamex xIslandx</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="my-8"></div>
+                    <div class="flex items-center relative w-auto">
+                        <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 w-[80%] shadow-md" value="Search">
+                    </div>
+                </div>
+
+                <!-- Right side (red box) -->
+                <div id="red-box" class="w-2/3 flex items-center justify-center bg-slate-200">
+                    <h2 class="text-white text-xl">Your Content Here</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Booking Manage Trips Schedule Vessel Tracking ends -->
+     <!-- footer starts  -->
+    <footer class="h-[500px] w-full relative">
+        <div class="w-[60%] h-[1px] bg-gray-500 mx-auto"></div>
+        <div class="w-[60%] h-auto flex flex-col mx-auto ">
+            <a href="" class="text-xl text-blue-500 hover:underline">Credit and Receipts</a>
+            <a href="" class="text-xl text-blue-500 hover:underline">COVID-19 Policies</a>
+            <a href="" class="text-xl text-blue-500 hover:underline">ID Requirements</a>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-[300px] bg-cover bg-center bg-no-repeat" style="background-image: url('https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u648.jpg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236');">
+            <div class="w-[60%] mx-auto">
+                <div class="flex flex-wrap mx-6 gap-7 grid-cols-2 md:grid-cols-3 sm:grid-cols-4 justify-evenly">
+                    <ul class="flex flex-col gap-3">
+                        <li class="font-bold text-[#21235e]">Services</li>
+                        <li class="hover:underline hover:text-blue-700">Contact Us</li>
+                        <li class="hover:underline hover:text-blue-700">Credit and Receipts</li>
+                        <li class="hover:underline hover:text-blue-700">All Fees</li>
+                        <li class="hover:underline hover:text-blue-700">Guests with Disabilities</li>
+
+                    </ul>
+                    <ul class="flex flex-col gap-3">
+                        <li class="hover:underline hover:text-blue-700">  </li>
+                        <li class="hover:underline hover:text-blue-700">ID Requirements</li>
+                        <li class="hover:underline hover:text-blue-700">COVID-19 Policies</li>
+                        <li class="hover:underline hover:text-blue-700">FAQ</li>
+                    </ul>
+                    <ul class="flex flex-col gap-3">
+                        <li class="font-bold text-[#21235e]">Services</li>
+                        <li class="hover:underline hover:text-blue-700">Schedule</li>
+                        <li class="hover:underline hover:text-blue-700">Make a Booking</li>
+                        <li class="hover:underline hover:text-blue-700">Cargo Services</li>
+                    </ul>
+                    <ul class="flex flex-col gap-3">
+                        <li class="hover:underline hover:text-blue-700"> </li>
+                        <li class="hover:underline hover:text-blue-700">Shipment Tracking</li>
+                        <li class="hover:underline hover:text-blue-700">Vessel Tracking</li>
+                        <li class="hover:underline hover:text-blue-700"> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer ends  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get references to the anchor tags, divs, and the red box
+            const domesticLink = document.getElementById('domestic-link');
+            const internationalLink = document.getElementById('international-link');
+            const domesticDiv = document.getElementById('domestic');
+            const internationalDiv = document.getElementById('international');
+            const redBox = document.getElementById('red-box');
+
+            // Initially show domestic and hide international, show red box
+            domesticDiv.style.display = 'block';
+            internationalDiv.style.display = 'none';
+            redBox.style.display = 'flex';
+
+            // Add click event listener to Domestic link
+            domesticLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor click behavior
+                domesticDiv.style.display = 'block'; // Show domestic
+                internationalDiv.style.display = 'none'; // Hide international
+                redBox.style.display = 'flex'; // Show red box
+            });
+
+            // Add click event listener to International link
+            internationalLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor click behavior
+                domesticDiv.style.display = 'none'; // Hide domestic
+                internationalDiv.style.display = 'block'; // Show international
+                redBox.style.display = 'none'; // Hide red box
+            });
+        });
+    </script>
 </body>
 </html>
