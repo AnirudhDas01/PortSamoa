@@ -11,10 +11,17 @@
     <body>
         <!-- Navbar start -->
         <header class="shadow-2xl z-20 relative">
+            <div class="w-[80%] h-auto mx-auto">
+                <figure>
+                    <img class="mt-4 w-[120px]"src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u543.svg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="">
+                </figure>
+            </div>
             <nav class="w-full h-[50px] bg-[#21235e]">
                 <div class="w-[80%] mx-auto flex justify-between items-center h-full">
-                    <div class="text-white sm:font-bold font-semibold text-sm sm:p-[12px] p-[5px] py-[10px]">
-                        <a href="#" aria-label="Homepage"></a>
+                    <div class="text-white sm:font-semibold font-semibold  sm:p-[12px] p-[5px] py-[10px] flex justify-center gap-4 ">
+                        <a href="">
+                            <i class="fa fa-bars sm:hidden text-2xl"></i>
+                        </a>
                         <h3 class="sm:block hidden">Inter-Island Travel American Samoa</h3>
                     </div>
                     <div class="p-[6px] sm:gap-3 gap-1 flex text-sm font-semibold">
@@ -37,14 +44,17 @@
         </section>
         <!-- Welcome Department of Port Administration section ends -->
         <!-- Booking Manage Trips Schedule Vessel Tracking starts -->
-        <section class="h-auto px-4 py-6">
-            <div class="mx-auto flex flex-col w-full">
+        
+        <section class="h-auto px-4 py-6 w-full">
+            <div class="mx-auto flex flex-col w-[60%] mx-auto">
+                
+                
                 <!-- Navigation tabs -->
-                <div class="grid sm:grid-cols-4 sm:m-8 m-4 gap-2 mb-4">
-                    <a href="#" id="book-link" class="min-h-[65px] flex items-center justify-center hover:underline bg-[#21235e] text-white font-semibold text-xl">Book</a>
-                    <a href="#" id="manage-trips-link" class="bg-slate-200 min-h-[65px] flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 font-semibold">Manage Trips</a>
-                    <a href="#" id="schedule-link" class="bg-slate-200 min-h-[65px] flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 font-semibold">Schedule</a>
-                    <a href="#" id="vessel-tracking-link" class="bg-slate-200 min-h-[65px] flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 font-semibold">Vessel Tracking</a>
+                <div class="flex grid sm:grid-cols-4 sm:m-8 m-4 gap-1 mb-4">
+                    <a href="#" id="book-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 ">Book</a>
+                    <a href="#" id="manage-trips-link" class="nav-link bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600">Manage Trips</a>
+                    <a href="#" id="schedule-link" class="nav-link bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600">Schedule</a>
+                    <a href="#" id="vessel-tracking-link" class="nav-link bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600">Vessel Tracking</a>
                 </div>
                 <!-- Main content area -->
                 <!-- book section  -->
@@ -60,11 +70,11 @@
                             <div class="flex flex-col gap-4" id="domestic">
                                 <div class="flex gap-2 text-white mt-4 items-center">
                                     <input id="radio-one-way" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-one-way" />
-                                    <label for="radio-one-way" id="label-one-way" class="text-xl text-gray-900 text-wrap">One Way</label>
+                                    <label for="radio-one-way" id="label-one-way" class="text-lg text-gray-900 text-wrap">One Way</label>
                                     <input id="radio-charter" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-charter" />
-                                    <label for="radio-charter" id="label-charter" class="text-xl text-gray-900">Charter</label>
+                                    <label for="radio-charter" id="label-charter" class="text-lg text-gray-900">Charter</label>
                                     <input id="radio-cruise" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-cruise" />
-                                    <label for="radio-cruise" id="label-cruise" class="text-xl text-gray-900">Cruise</label>
+                                    <label for="radio-cruise" id="label-cruise" class="text-lg text-gray-900">Cruise</label>
                                 </div>
                                 <!-- Domestic content -->
                                 <div>
@@ -288,6 +298,7 @@
                 function showSection(section) {
                     hideAllSections();
                     section.style.display = "flex";
+
                 }
 
                 // Set up event listeners for the anchors
@@ -340,6 +351,50 @@
                     redBox.style.display = "none"; // Hide red box
                 });
             });
+
+            // Function to reset styles for all links
+        function resetLinkStyles() {
+            const links = document.querySelectorAll('.nav-link'); // Assuming all nav links have the 'nav-link' class
+            links.forEach(link => {
+                link.style.backgroundColor = '#f2f2f2'; // Set to default background color
+                link.style.color = '#518cac'; // Reset font color to default
+                link.style.textDecoration = 'underline'; // Reset text decoration
+            });
+        }
+
+        // Event listeners for each link
+        document.getElementById('book-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            resetLinkStyles(); // Reset all links to default style
+            this.style.backgroundColor = '#21235e'; // Change background color
+            this.style.color = 'white'; // Change font color
+            this.style.textDecoration = 'none'; // Remove text decoration
+        });
+
+        document.getElementById('manage-trips-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            resetLinkStyles();
+            this.style.backgroundColor = '#21235e';
+            this.style.color = 'white';
+            this.style.textDecoration = 'none';
+        });
+
+        document.getElementById('schedule-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            resetLinkStyles();
+            this.style.backgroundColor = '#21235e';
+            this.style.color = 'white';
+            this.style.textDecoration = 'none';
+        });
+
+        document.getElementById('vessel-tracking-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            resetLinkStyles();
+            this.style.backgroundColor = '#21235e';
+            this.style.color = 'white';
+            this.style.textDecoration = 'none';
+        });
+
         </script>
     </body>
 </html>
