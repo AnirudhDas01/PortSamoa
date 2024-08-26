@@ -74,31 +74,54 @@
                             <!-- Dometic starts  -->
                             <div class="flex flex-col gap-4" id="domestic">
                                 <div class="flex gap-2 text-white mt-4 items-center">
-                                    <input id="radio-one-way" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-one-way" />
+                                    <input id="radio-one-way" type="radio" name="travel-type" class="w-5 h-5 border-2 border-blue-600 text-blue-500 bg-blue-600 default:ring-blue-500" aria-labelledby="label-one-way" />
                                     <label for="radio-one-way" id="label-one-way" class="text-lg text-gray-900 text-wrap">One Way</label>
-                                    <input id="radio-charter" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-charter" />
+                                    <input id="radio-charter" type="radio" name="travel-type" class="w-5 h-5 border-2 border-blue-600 text-blue-500 bg-blue-600 " aria-labelledby="label-charter" />
                                     <label for="radio-charter" id="label-charter" class="text-lg text-gray-900">Charter</label>
-                                    <input id="radio-cruise" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-cruise" />
+                                    <input id="radio-cruise" type="radio" name="travel-type" class="w-5 h-5 border-2 border-blue-600 text-blue-500 bg-blue-600 " aria-labelledby="label-cruise" />
                                     <label for="radio-cruise" id="label-cruise" class="text-lg text-gray-900">Cruise</label>
                                 </div>
                                 <!-- Domestic content -->
-                                <div class="mt-5">
+                                <div class=" flex flex-col mt-5 one-way gap-4 block">
                                     <label for="from" class="block mb-2 text-lg text-black">From</label>
-                                    <select id="from" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg">
+                                    <select id="from" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg w-[80%]">
                                         <option value="US">xPortNamex xIslandx</option>
                                         <option value="CA">Pago Pago, Tutuila</option>
                                         <option value="FR">Ta'u</option>
                                         <option value="US">xPortNamex xIslandx</option>
                                     </select>
-                                    <div class="my-3"></div>
+                                    <div class=""></div>
                                     <label for="to" class="block mb-2 text-lg text-black">To</label>
-                                    <select id="to" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg">
+                                    <select id="to" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg w-[80%]">
                                         <option value="US">xPortNamex xIslandx</option>
                                         <option value="CA">Pago Pago, Tutuila</option>
                                         <option value="FR">Ta'u</option>
                                         <option value="US">xPortNamex xIslandx</option>
                                     </select>
-                                    <div class="my-12"></div>
+                                    <div class=""></div>
+                                    <div class="flex items-center relative w-auto">
+                                        <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 w-[80%] shadow-md" value="Search" />
+                                    </div>
+                                </div>
+                                <div class="charter flex flex-col gap-5 hidden">
+                                    <div class="flex flex-col gap-5 mt-4">
+                                    <label class="text-[#21235e] font-bold text-2xl w-[80%]">Enter the charter code</label>
+                                    <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-6 text-lg w-[80%]">
+                                    </div>
+                                    <div class="flex items-center relative w-auto">
+                                        <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 w-[30%] shadow-md" value="Search" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col cruise gap-5 hidden">
+                                    <div>
+                                        <label for="from" class="block mb-2 text-lg text-black">From</label>
+                                        <select id="from" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg w-[80%]">
+                                            <option value="US">xPortNamex xIslandx</option>
+                                            <option value="CA">Pago Pago, Tutuila</option>
+                                            <option value="FR">Ta'u</option>
+                                            <option value="US">xPortNamex xIslandx</option>
+                                        </select>
+                                    </div>
                                     <div class="flex items-center relative w-auto">
                                         <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 w-[80%] shadow-md" value="Search" />
                                     </div>
@@ -110,13 +133,10 @@
                     </div>
                     <!-- Right side (red box) -->
                     
-                        <div id="red-box" class="w-full sm:w-2/3 flex flex-wrap items-center justify-between  p-4 relative sm:h-auto h-[200px]">
-                            <img src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u41_mouseover.svg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="" class="absolute top-[0%] left-[0%] sm:h-[35px] h-[20px]">
-                            <img src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u56.svg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="" class="absolute top-[30%] left-[0%] sm:h-[130px] h-[65px]">
-                            <img src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u47_mouseover.svg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="" class="absolute top-[45%] left-[30%] sm:h-[25px] h-[12px]">
-                            <img src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u44_mouseover.svg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="" class="absolute top-[5%] left-[28%] sm:h-[50px] h-[25px]">
-                            <img src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u83.svg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="" class="absolute top-[25%] left-[38%] sm:h-[45px] sm:h-[22px] h-[11px]">
-                            <img src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u50_mouseover.svg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="" class="absolute top-[60%] left-[48%] sm:h-[45px] h-[22px]">
+                        <div id="red-box" class="w-full sm:w-2/3 flex flex-wrap items-center justify-between  p-4 relative sm:h-auto h-[200px] absolutes">
+                            <figure>
+                                <img src="map.png" alt="">
+                            </figure>
                         </div>
                 </div>
                 
@@ -185,41 +205,49 @@
                     </div>
                 </div>
                 <!-- try international section here  -->
-                <div class="">
-                    <div class="flex flex-row flex-wrap just" id="international" style="display: none;">
+                    <div class="flex flex-col flex-wrap just" id="international" style="display: none;">
                         <!-- Initially hidden international content -->
                         <div class="flex gap-2 text-white mt-8 items-center">
-                            <input id="radio-one-way" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-one-way" />
-                            <label for="radio-one-way" id="label-one-way" class="text-lg text-gray-900 text-wrap">One Way</label>
-                            <input id="radio-charter" type="radio" name="travel-type" class="w-5 h-5 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500" aria-labelledby="label-charter" />
-                            <label for="radio-charter" id="label-charter" class="text-lg text-gray-900">Charter</label>
+                            <input id="radio-one-way-intl" type="radio" name="travel-type" class="w-5 h-5 border-2 border-blue-600 text-blue-500 bg-blue-600 default:ring-blue-500" aria-labelledby="label-one-way" />
+                            <label for="radio-one-way-intl" id="label-one-way" class="text-lg text-gray-900 text-wrap">One Way</label>
+                            <input id="radio-charter-intl" type="radio" name="travel-type" class="w-5 h-5 border-2 border-blue-600 text-blue-500 bg-blue-600 " aria-labelledby="label-charter" />
+                            <label for="radio-charter-intl" id="label-charter" class="text-lg text-gray-900">Charter</label>
                         </div>
-                        <div class="sm:flex sm:w-[60%] justify-between gap-4 mt-5">
-                            <form action="" class="w-full sm:w-[50%]">
-                                <label for="from-intl" class="block mb-2 text-lg text-black">From</label>
-                                <select id="from-intl" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg w-full">
-                                    <option value="US">xPortNamex xIslandx</option>
-                                    <option value="CA">Pago Pago, Tutuila</option>
-                                    <option value="FR">Ta'u</option>
-                                    <option value="US">xPortNamex xIslandx</option>
-                                </select>
-                            </form>
-                            <form action="" class="w-full sm:w-[50%]">
-                                <label for="to-intl" class="block mb-2 text-lg text-black">To</label>
-                                <select id="to-intl" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg w-full">
-                                    <option value="US">xPortNamex xIslandx</option>
-                                    <option value="CA">Pago Pago, Tutuila</option>
-                                    <option value="FR">Ta'u</option>
-                                    <option value="US">xPortNamex xIslandx</option>
-                                </select>
-                            </form>
+                        <div class="one-way-intl flex flex-col gap-5">
+                            <div class="sm:flex sm:w-[60%] justify-between gap-4 mt-5">
+                                <form action="" class="w-full sm:w-[50%]">
+                                    <label for="from-intl" class="block mb-2 text-lg text-black">From</label>
+                                    <select id="from-intl" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg w-full">
+                                        <option value="US">xPortNamex xIslandx</option>
+                                        <option value="CA">Pago Pago, Tutuila</option>
+                                        <option value="FR">Ta'u</option>
+                                        <option value="US">xPortNamex xIslandx</option>
+                                    </select>
+                                </form>
+                                <form action="" class="w-full sm:w-[50%]">
+                                    <label for="to-intl" class="block mb-2 text-lg text-black">To</label>
+                                    <select id="to-intl" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg w-full">
+                                        <option value="US">xPortNamex xIslandx</option>
+                                        <option value="CA">Pago Pago, Tutuila</option>
+                                        <option value="FR">Ta'u</option>
+                                        <option value="US">xPortNamex xIslandx</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="flex items-center relative w-[50%]">
+                                <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 w-[55%] shadow-md" value="Search" />
+                            </div>
                         </div>
-                        <div class="my-8"></div>
-                        <div class="flex items-center relative w-[50%]">
-                            <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 w-[55%] shadow-md" value="Search" />
+                        <div class="charter-intl flex flex-col gap-5 hidden">
+                            <div class="flex flex-col gap-5 mt-4">
+                            <label class="text-[#21235e] font-bold text-2xl w-[80%]">Enter the charter code</label>
+                            <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-6 text-lg w-[25.8%]">
+                            </div>
+                            <div class="flex items-center relative w-auto">
+                                <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 w-[10%] shadow-md" value="Search" />
+                            </div>
                         </div>
                     </div>
-                </div>
                  <!-- International section end -->
                 <!-- vessel section ends  -->
             </div>
@@ -433,6 +461,85 @@
             this.style.color = 'white';
             this.style.textDecoration = 'none';
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        var RadioOneWay = document.getElementById('radio-one-way');
+        var RadioCharter = document.getElementById('radio-charter');
+        var RadioCruise = document.getElementById('radio-cruise');
+        var OneWayDiv = document.getElementsByClassName('one-way');
+        var CharterDiv = document.getElementsByClassName('charter');
+        var CruiseDiv = document.getElementsByClassName('cruise');
+        RadioOneWay.addEventListener("click", function() {
+            // Show only OneWayDiv, hide CharterDiv and CruiseDiv
+            for (var i = 0; i < OneWayDiv.length; i++) {
+                OneWayDiv[i].classList.remove("hidden");
+                OneWayDiv[i].classList.add("block");
+            }
+            for (var i = 0; i < CharterDiv.length; i++) {
+                CharterDiv[i].classList.remove("block");
+                CharterDiv[i].classList.add("hidden");
+            }
+            for (var i = 0; i < CruiseDiv.length; i++) {
+                CruiseDiv[i].classList.remove("block");
+                CruiseDiv[i].classList.add("hidden");
+            }
+        });
+        // Similar event listeners for other radio buttons
+        RadioCharter.addEventListener("click", function() {
+            // Show only CharterDiv, hide OneWayDiv and CruiseDiv
+            for (var i = 0; i < OneWayDiv.length; i++) {
+                OneWayDiv[i].classList.remove("block");
+                OneWayDiv[i].classList.add("hidden");
+            }
+            for (var i = 0; i < CharterDiv.length; i++) {
+                CharterDiv[i].classList.remove("hidden");
+                CharterDiv[i].classList.add("block");
+            }
+            for (var i = 0; i < CruiseDiv.length; i++) {
+                CruiseDiv[i].classList.remove("block");
+                CruiseDiv[i].classList.add("hidden");
+            }
+        });
+        RadioCruise.addEventListener("click", function() {
+            // Show only CruiseDiv, hide OneWayDiv and CharterDiv
+            for (var i = 0; i < OneWayDiv.length; i++) {
+                OneWayDiv[i].classList.remove("block");
+                OneWayDiv[i].classList.add("hidden");
+            }
+            for (var i = 0; i < CharterDiv.length; i++) {
+                CharterDiv[i].classList.remove("block");
+                CharterDiv[i].classList.add("hidden");
+            }
+            for (var i = 0; i < CruiseDiv.length; i++) {
+                CruiseDiv[i].classList.remove("hidden");
+                CruiseDiv[i].classList.add("block");
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded' , function(){
+        OneWayIntlRadio = document.getElementById('radio-one-way-intl');
+        CharterIntlRadio = document.getElementById('radio-charter-intl');
+        OneWayIntlDiv = document.getElementsByClassName('one-way-intl');
+        CharterIntlDiv = document.getElementsByClassName('charter-intl');
+
+        OneWayIntlRadio.addEventListener("click" , function() {
+            for(i = 0; i< OneWayIntlDiv.length; i++) {
+                OneWayIntlDiv[i].classList.remove('hidden');
+            }
+            for(i = 0; i< CharterIntlDiv.length; i++) {
+                CharterIntlDiv[i].classList.add('hidden');
+            }
+        });
+        CharterIntlRadio.addEventListener("click" , function() {
+            for(i = 0; i< CharterIntlDiv.length; i++) {
+                CharterIntlDiv[i].classList.remove('hidden');
+            }
+            for(i = 0; i< OneWayIntlDiv.length; i++) {
+                OneWayIntlDiv[i].classList.add('hidden');
+            }
+        });
+    });
 
         </script>
     </body>
