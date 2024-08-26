@@ -52,13 +52,16 @@
         <section class="h-auto px-4 py-6 w-full">
             <div class=" flex flex-col w-[70%] mx-auto">
                 
+               <h1 class="sm:my-6 my-2 mx-3 mb-8 w-full text-xl">Always<span class="font-bold text-blue-600"> Sign in </span> to your account to save time when booking.</h1>
+                    
+                
                 
                 <!-- Navigation tabs -->
-                <div class="flex grid sm:grid-cols-4 sm:m-8 m-4 gap-1 mb-4">
-                    <a href="#" id="book-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 ">Book</a>
-                    <a href="#" id="manage-trips-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600">Manage Trips</a>
-                    <a href="#" id="schedule-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600">Schedule</a>
-                    <a href="#" id="vessel-tracking-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600">Vessel Tracking</a>
+                <div class="flex grid sm:grid-cols-4 sm:m-4 m-2 gap-1 mb-4 w-full">
+                    <a href="#" id="book-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full ">Book</a>
+                    <a href="#" id="manage-trips-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Manage Trips</a>
+                    <a href="#" id="schedule-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Schedule</a>
+                    <a href="#" id="vessel-tracking-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Vessel Tracking</a>
                 </div>
                 <!-- Main content area -->
                 <!-- book section  -->
@@ -107,7 +110,7 @@
                                     <div class="flex flex-col gap-5 mt-4">
                                     <img src="" alt="">
                                     <label class="text-[#21235e] font-bold text-lg sm:w-[80%] w-[100%]">Enter the charter code</label>
-                                    <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-6 text-lg w-[80%]">
+                                    <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-6 text-lg w-[80%]" placeholder="Enter here">
                                     </div>
                                     <div class="flex items-center relative w-auto">
                                         <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 sm:w-[30%] w-[50%] shadow-md" value="Search" />
@@ -238,7 +241,7 @@
                     </div>
                 </div>
                 <!-- try international section here  -->
-                    <div class="flex flex-col flex-wrap just" id="international" style="display: none;">
+                    <div class="flex flex-col flex-wrap hidden" id="international">
                         <!-- Initially hidden international content -->
                         <div class="flex gap-2 text-white mt-8 items-center">
                             <input id="radio-one-way-intl" type="radio" name="travel-type" class="w-5 h-5 border-2 border-blue-600 text-blue-500 bg-blue-600 default:ring-blue-500" aria-labelledby="label-one-way" />
@@ -274,7 +277,7 @@
                         <div class="charter-intl flex flex-col gap-5 hidden">
                             <div class="flex flex-col gap-5 mt-4">
                             <label class="text-[#21235e] font-bold text-2xl sm:w-[80%] w-[100%]">Enter the charter code</label>
-                            <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-6 text-lg sm:w-[25.8%] w-[100%]">
+                            <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-6 text-lg sm:w-[25.8%] w-[100%]" placeholder="Enter here">
                             </div>
                             <div class="flex items-center relative w-auto">
                                 <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 sm:w-[10%] w-[40%] shadow-md" value="Search" />
@@ -332,7 +335,7 @@
                     <div>
                         <figure class="flex flex-col justify-end items-center">
                             <img class="h-[100px]" src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u662.png?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="">
-                            <figcaption>Port Electronic Ticketing System</figcaption>
+                            <figcaption class="text-gray-600">Port Electronic Ticketing System</figcaption>
                         </figure>
                     </div>
     
@@ -563,29 +566,118 @@
         });
     });
 
-    document.addEventListener('DOMContentLoaded' , function(){
-        OneWayIntlRadio = document.getElementById('radio-one-way-intl');
-        CharterIntlRadio = document.getElementById('radio-charter-intl');
-        OneWayIntlDiv = document.getElementsByClassName('one-way-intl');
-        CharterIntlDiv = document.getElementsByClassName('charter-intl');
+    document.addEventListener('DOMContentLoaded', function() {
+    // Get elements
+    const OneWayIntlRadio = document.getElementById('radio-one-way-intl');
+    const CharterIntlRadio = document.getElementById('radio-charter-intl');
+    const OneWayIntlDiv = document.querySelector('.one-way-intl');
+    const CharterIntlDiv = document.querySelector('.charter-intl');
+    const InternationalSection = document.getElementById('international');
 
-        OneWayIntlRadio.addEventListener("click" , function() {
-            for(i = 0; i< OneWayIntlDiv.length; i++) {
-                OneWayIntlDiv[i].classList.remove('hidden');
-            }
-            for(i = 0; i< CharterIntlDiv.length; i++) {
-                CharterIntlDiv[i].classList.add('hidden');
-            }
-        });
-        CharterIntlRadio.addEventListener("click" , function() {
-            for(i = 0; i< CharterIntlDiv.length; i++) {
-                CharterIntlDiv[i].classList.remove('hidden');
-            }
-            for(i = 0; i< OneWayIntlDiv.length; i++) {
-                OneWayIntlDiv[i].classList.add('hidden');
+    // Show one-way and hide charter
+    OneWayIntlRadio.addEventListener("click", function() {
+        OneWayIntlDiv.classList.remove("hidden");
+        OneWayIntlDiv.classList.add("block");
+        CharterIntlDiv.classList.remove("block");
+        CharterIntlDiv.classList.add("hidden");
+    });
+
+    // Show charter and hide one-way
+    CharterIntlRadio.addEventListener("click", function() {
+        CharterIntlDiv.classList.remove("hidden");
+        CharterIntlDiv.classList.add("block");
+        OneWayIntlDiv.classList.remove("block");
+        OneWayIntlDiv.classList.add("hidden");
+    });
+
+    // Hide international section when clicking any other anchor
+    document.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener("click", function() {
+            if (InternationalSection) {
+                InternationalSection.classList.add('hidden');
             }
         });
     });
+
+    // Optionally, hide international section when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!InternationalSection.contains(event.target) && !event.target.closest('a')) {
+            InternationalSection.classList.add('hidden');
+        }
+    });
+});
+
+    const otherAnchors = document.querySelectorAll('a:not([href="#"])'); // Adjust the selector as needed
+
+    otherAnchors.forEach(anchor => {
+        anchor.addEventListener("click", function() {
+            // Hide international content when any other anchor is clicked
+            if (InternationalSection) {
+                InternationalSection.classList.add('hidden');
+            }
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+    // Get references to the elements
+    var internationalDiv = document.getElementById('international');
+    var oneWayIntlRadio = document.getElementById('radio-one-way-intl');
+    var charterIntlRadio = document.getElementById('radio-charter-intl');
+    var bookLink = document.getElementById('book-link');
+    var manageTripsLink = document.getElementById('manage-trips-link');
+    var scheduleLink = document.getElementById('schedule-link');
+    var vesselTrackingLink = document.getElementById('vessel-tracking-link');
+
+    // Function to hide the international div
+    function hideInternationalDiv() {
+        internationalDiv.style.display = 'none';
+    }
+
+    // Event listener for One Way radio button
+    oneWayIntlRadio.addEventListener('click', function() {
+        for (var i = 0; i < document.getElementsByClassName('one-way-intl').length; i++) {
+            document.getElementsByClassName('one-way-intl')[i].classList.remove('hidden');
+            document.getElementsByClassName('one-way-intl')[i].classList.add('block');
+        }
+        for (var i = 0; i < document.getElementsByClassName('charter-intl').length; i++) {
+            document.getElementsByClassName('charter-intl')[i].classList.remove('block');
+            document.getElementsByClassName('charter-intl')[i].classList.add('hidden');
+        }
+    });
+
+    // Event listener for Charter radio button
+    charterIntlRadio.addEventListener('click', function() {
+        for (var i = 0; i < document.getElementsByClassName('charter-intl').length; i++) {
+            document.getElementsByClassName('charter-intl')[i].classList.remove('hidden');
+            document.getElementsByClassName('charter-intl')[i].classList.add('block');
+        }
+        for (var i = 0; i < document.getElementsByClassName('one-way-intl').length; i++) {
+            document.getElementsByClassName('one-way-intl')[i].classList.remove('block');
+            document.getElementsByClassName('one-way-intl')[i].classList.add('hidden');
+        }
+    });
+
+    // Event listener for Manage Trips link
+    manageTripsLink.addEventListener('click', function(event) {
+        hideInternationalDiv();
+    });
+
+    // Event listener for Schedule link
+    scheduleLink.addEventListener('click', function(event) {
+        hideInternationalDiv();
+    });
+
+    // Event listener for Vessel Tracking link
+    vesselTrackingLink.addEventListener('click', function(event) {
+        hideInternationalDiv();
+    });
+
+    // Optionally handle the book link if you want specific behavior
+    bookLink.addEventListener('click', function(event) {
+        // Optionally, you can keep the international div open
+    });
+});
+
+
 
         </script>
     </body>
