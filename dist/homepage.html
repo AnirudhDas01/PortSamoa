@@ -107,7 +107,7 @@
                 <a href="#" id="book-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full ">Book</a>
                 <a href="#" id="manage-trips-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Manage Trips</a>
                 <a href="#" id="schedule-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Schedule</a>
-                <a href="#" id="vessel-tracking-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Vessel Tracking</a>
+                <a href="#" id="vessel-tracking-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 sm:text-xl text-lg text-blue-600 w-full text-center">Vessel Tracking</a>
                 </div>
                 <!-- Main content area -->
                 <!-- book section  -->
@@ -122,7 +122,7 @@
                         </div>
                         <!-- Dometic starts  -->
                         <div class="flex flex-col" id="domestic">
-                            <div class="flex mt-4 items-center w-full justify-start gap-4 custom-radio">
+                            <div class="flex mt-4 items-center sm:w-full w-[70%s] justify-start gap-4 custom-radio">
                                 <div class="flex gap-1 pt-1 items-center mx-3 radio-container">
                                     <!-- Hidden radio button and styled label -->
                                     <input id="radio-one-way" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-one-way" />
@@ -135,7 +135,7 @@
                                     <label for="radio-charter" id="label-charter" class="sm:text-[21px] text-lg text-gray-900"></label>
                                     <span class="sm:text-[21px] text-lg text-gray-900">Charter</span>
                                 </div>
-                                <div class="flex gap-1 pt-1 items-center ml-4 radio-container">
+                                <div class="flex gap-1 pt-1 items-center sm:ml-4 radio-container">
                                     <input id="radio-cruise" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-cruise" />
                                     <label for="radio-cruise" id="label-cruise" class="sm:text-[21px] text-lg text-gray-900"></label>
                                     <span class="sm:text-[21px] text-lg text-gray-900">Cruise</span>
@@ -144,7 +144,7 @@
                             <!-- Domestic content -->
                             <div class=" flex flex-col mt-7 one-way gap- block">
                             <label for="from" class="block mb-2 text-lg text-black">From</label>
-                            <select id="from" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg w-[70%]">
+                            <select id="from" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg sm:w-[70%] w-[100%]">
                                 <option value="US">xPortNamex xIslandx</option>
                                 <option value="CA">Pago Pago, Tutuila</option>
                                 <option value="FR">Ta'u</option>
@@ -152,7 +152,7 @@
                             </select>
                             <div class=""></div>
                             <label for="to" class="block mb-2 text-lg text-black">To</label>
-                            <select id="to" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg w-[70%]">
+                            <select id="to" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2.5 text-lg sm:w-[70%] w-[100%]">
                                 <option value="US">xPortNamex xIslandx</option>
                                 <option value="CA">Pago Pago, Tutuila</option>
                                 <option value="FR">Ta'u</option>
@@ -160,7 +160,7 @@
                             </select>
                             <div class=""></div>
                             <div class="flex items-center relative w-auto mt-6">
-                                <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 w-[70%] shadow-md" value="Search" />
+                                <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 sm:w-[70%] w-[100%] shadow-md" value="Search" />
                             </div>
                             </div>
                             <div class="charter flex flex-col gap-5 hidden">
@@ -194,7 +194,7 @@
                 <!-- Right side (red box) -->
                 <div id="red-box" class="w-full sm:w-2/3 items-center sm:h-[500px] h-[300px] relative">
                     <figure>
-                        <img src="map.png" alt="" class=" sm:h-[250px] h-[250   px] auto bottom-0">
+                        <img src="map.png" alt="" class=" sm:h-[250px] md:h-[200px] h-[150px] auto bottom-0">
                     </figure>
                 </div>
                 </div>
@@ -286,7 +286,7 @@
                 <!-- try international section here  -->
                 <div class="flex flex-col flex-wrap mt-3 items-center" id="international">
                 <!-- Initially hidden international content -->
-                <div class="flex mt-4 items-center justify-start gap-4 sm:w-[33%] w-full p-2  custom-radio">
+                <div class="flex mt-4 items-center justify-start gap-4  p-2  custom-radio">
                     <div class="flex gap-1 items-center ml-1 radio-container">
                         <input id="radio-one-way-intl" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-one-way" />
                         <label for="radio-one-way-intl" id="label-one-way" class="sm:text-[21px] text-lg text-gray-900 text-wrap"></label>
@@ -319,7 +319,7 @@
                             </select>
                         </form>
                     </div>
-                    <div class="flex items-center relative w-[50%]">
+                    <div class="flex items-center relative sm:w-[50%] w-[100%]">
                         <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-2xl font-medium rounded-lg text-white py-2.5 w-[55%] shadow-md" value="Search" />
                     </div>
                 </div>
