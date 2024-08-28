@@ -1,59 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>HomePage</title>
-        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     </head>
-    <body>
-        <!-- Navbar start -->
-        <header class=" z-20 relative">
-            <div class="w-[80%] h-auto mx-auto flex justify-between relative">
-                <figure>
-                    <img class="mt-4 w-[200px] px-4 pt-5"src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u543.svg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="">
-                </figure>
-                <div class="absolute bottom-3 right-1 flex flex-col items-end">
-                    <h1 class="">Next Scheduled Voyage sails</h1>
-                    <h1 class="text-[#21235e] font-bold">00d 00h 00m</h1>
-                </div>
-            </div>
-            <nav class="w-full h-[50px] bg-[#21235e]">
-                <div class="w-[80%] mx-auto flex justify-between items-center h-full">
-                    
-                    <div class="text-white sm:font-semibold font-semibold  sm:p-[12px] p-[5px] py-[10px] flex items-center gap-4 ">
-                        <a href="" class="h-full w-full">
-                            <i class="fa fa-bars sm:hidden text-[32px] text-blue-500"></i>
-                        </a>
-                        <h3 class="sm:block hidden text-[16.5px] text-nowrap">Inter-Island Travel American Samoa</h3>
-                    </div>
-                    
-                    <div class="p-[6px] sm:gap-3 gap-1 flex text-sm font-semibold">
-                        <a href="#" class="bg-white text-blue-500 sm:p-[6px] p-1 sm:px-[14px] px-[10px] sm:text-[14px] text-[10px] rounded-md hover:bg-blue-500 hover:text-white duration-300">Sign In</a>
-                        <a href="#" class="text-white bg-blue-500 sm:p-[6px] p-1 sm:px-[14px] px-[10px] sm:text-[14px] text-[10px] rounded-md hover:bg-blue-600 duration-300">Create New Account</a>
-                    </div>
-                </div>
-                <img class=""src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u541.png?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="">
-            </nav>
-        </header>
-        <!-- Navbar ends -->
-        <!-- Welcome Department of Port Administration section -->
-        <section class="sm:h-[370px] h-[300px] w-full">
-            <div class="w-[80%] h-full mx-auto flex flex-col justify-end sm:p-6 p-4 ">
-                <h1 class="text-[#21235e] sm:text-[62px] text-[40px] font-bold">Welcome</h1>
-                <h2 class="text-[#21235e] sm:text-[40px] text-[20px] font-bold">
-                    Department of Port Administration<br/>
-                    Inter-Island Ferry Services
-                </h2>
-            </div>
-            <img class="h-auto bg-cover"src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u541.png?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="">
-        </section>
-        <!-- Welcome Department of Port Administration section ends -->
-        <!-- Booking Manage Trips Schedule Vessel Tracking starts -->
-        
+    <body >
         <section class="h-auto px-4 w-full">
             <div class=" flex flex-col w-[80%] mx-auto">
                 <h1 class="sm:my-6 my-2 mx-3 mb-8 w-full text-[21px]">Always<span class="font-bold text-blue-500"> Sign in </span> to your account to save time when booking.</h1>
@@ -237,11 +192,11 @@
                 <div class="flex flex-col flex-wrap mt-3 items-center" id="international">
                 <!-- Initially hidden international content -->
                 <div class="flex mt-4 items-center justify-start gap-4 sm:w-[33%] w-full p-2">
-                    <div class="flex gap-1 items-center ml-1">
+                    <div class="flex gap-1 items-center">
                         <input id="radio-one-way-intl" type="radio" name="travel-type" class="w-[25px] h-[25px] border-2 border-blue-600 text-blue-500 bg-blue-600 default:ring-blue-500" aria-labelledby="label-one-way" />
                         <label for="radio-one-way-intl" id="label-one-way" class="sm:text-[21px] text-lg text-gray-900 text-wrap">One Way</label>
                     </div>
-                    <div class="flex  gap-1 items-center ml-3">
+                    <div class="flex  gap-1 items-center">
                         <input id="radio-charter-intl" type="radio" name="travel-type" class="w-[25px] h-[25px] border-2 border-blue-600 text-blue-500 bg-blue-600 " aria-labelledby="label-charter" />
                         <label for="radio-charter-intl" id="label-charter" class="sm:text-[21px] text-lg text-gray-900">Charter</label>
                     </div>
@@ -272,7 +227,7 @@
                     </div>
                 </div>
                 <div class="charter-intl flex flex-col gap-5 hidden">
-                    <div class="flex flex-col gap-5 mt-7">
+                    <div class="flex flex-col gap-5 mt-4">
                         <label class="text-[#21235e] font-bold text-2xl sm:w-[80%] w-[100%]">Enter the charter code</label>
                         <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-6 text-lg sm:w-[25.8%] w-[100%]" placeholder="Enter here">
                     </div>
@@ -285,81 +240,6 @@
                 <!-- vessel section ends  -->
             </div>
         </section>
-        <footer class="w-full">
-            <!-- The line above the image -->
-            <div class="w-[80%]  h-[1px] bg-gray-400 mx-auto mt-20"></div>
-        
-            <!-- The text above the image -->
-            <div class="w-[80%] h-auto flex flex-col  mx-auto z-10 ">
-                <a href="" class="text-xl text-blue-500 hover:underline">Credit and Receipts</a>
-                <a href="" class="text-xl text-blue-500 hover:underline">COVID-19 Policies</a>
-                <a href="" class="text-xl text-blue-500 hover:underline">ID Requirements</a>
-            </div>
-            <div class="relative sm:h-[350px] h-[700px] bg-cover bg-center bg-no-repeat" style="background-image: url('https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u648.jpg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236');">
-                <!-- Container for lists positioned at the bottom -->
-                <div class=" px-[20px] flex sm:flex-row flex-col items-center justify-between  w-[80%] mx-auto absolute left-[15%] sm:bottom-6 bottom-32 ">
-                    <div class="grid sm:grid-cols-4 grid-cols-2 gap-5">
-                        <!-- List 1 -->
-                        <ul class="flex flex-col sm:gap-2 gap-1">
-                            <li class="font-bold text-[#21235e]">Services</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">Contact Us</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">Credit and Receipts</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">All Fees</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">Guests with Disabilities</li>
-                        </ul>
-                        <!-- List 2 -->
-                        <ul class="flex flex-col sm:gap-2 gap-1">
-                            <li class="font-bold text-[#21235e]">Information</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">ID Requirements</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">Making Payment</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">COVID-19 Policies</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">FAQ</li>
-                        </ul>
-                        <!-- List 3 -->
-                        <ul class="flex flex-col sm:gap-2 gap-1">
-                            <li class="font-bold text-[#21235e]">Support</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">Schedule</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">Make a Booking</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">Cargo Services</li>
-                        </ul>
-                        <!-- List 4 -->
-                        <ul class="flex flex-col sm:gap-2 gap-1">
-                            <li class="font-bold text-[#21235e]">Tracking</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">Shipment Tracking</li>
-                            <li class="text-gray-600 hover:text-blue-700 hover:underline">Vessel Tracking</li>
-                        </ul>
-                    </div>
-                    <div class="hidden sm:block">
-                        <figure class="flex flex-col justify-end items-center bottom-6 sm:mb-5">
-                            <img class="h-[60px]" src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/u662.png?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="">
-                            <figcaption class="text-gray-600 text-nowrap">Port Electronic Ticketing System</figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="absolute w-full bottom-0">
-                    <div class=" sm:w-[80%] w-[90%] mx-auto">
-                        <img class="w-[40px]" src="https://files.axshare.com/gsc/3JSW8K/29/b1/78/29b17833a1a24b14b03e85498e8bc82f/images/001_home_page__public__v4068/crab_u653.svg?pageId=f8d04c78-5cab-41f5-9fb8-2a4c6b711236" alt="">
-                    </div>
-                    <div class="w-full h-auto bg-[#21235e] text-gray-400 flex items-center justify-center mt-">
-                        <div class="w-[60%] sm:w-full mx-auto py-3">
-                            <div class="flex flex-col sm:flex-row justify-between gap-1 text-center sm:text-left w-[80%] mx-auto">
-                                <h1>Terms and Conditions | Privacy Policy</h1>
-                                <h1>Copyright &#169; 2021 DPA | American Samoa Government</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        
-            <!-- The background image with text inside -->
-        
-            <!-- Footer bottom bar -->
-
-        </footer>
-        
-        <!-- Booking Manage Trips Schedule Vessel Tracking ends -->
-        <script src="script.js">
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
