@@ -8,6 +8,51 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <style>
+            /* Hide the default radio button */
+            .custom-radio input[type="radio"] {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+            }
+          
+            /* Style the label to look like a radio button */
+            .custom-radio input[type="radio"] + label {
+              display: inline-block;
+              width: 25px; /* Matches the size of your input */
+              height: 25px; /* Matches the size of your input */
+              border-radius: 50%;
+              background-color: white; /* Background color for unchecked state */
+              border: 3px solid #2563EB; /* Blue border */
+              cursor: pointer;
+              position: relative;
+            }
+          
+            /* Style for the checked state */
+            .custom-radio input[type="radio"]:checked + label {
+              background-color: white; /* Keeping it white for consistency */
+              border-color: #2563EB; /* Blue border when checked */
+            }
+          
+            /* Blue dot when checked */
+            .custom-radio input[type="radio"]:checked + label::after {
+              content: "";
+              display: block;
+              width: 12px; /* Size of the blue dot */
+              height: 12px; /* Size of the blue dot */
+              background-color: #2563EB; /* Blue color for the dot */
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          
+            /* Ensure container styling and positioning */
+            .radio-container {
+              position: relative; /* Ensures positioning works with hidden input */
+            }
+          </style>
     </head>
     <body>
         <!-- Navbar start -->
@@ -72,23 +117,28 @@
                     <div class="flex flex-col gap-4">
                         <div class="flex gap-3 text-white mt-[40px]">
                             <!-- Added unique IDs for toggle functionality -->
-                            <a href="#" id="domestic-link" class=" bg-slate-200 flex items-center justify-center text-xl p-1 px-4 text-blue-500 rounded-full hover:hover:bg-blue-600 hover:text-white duration-300">Domestic</a>
-                            <a href="#" id="international-link" class=" bg-slate-200 flex items-center justify-center text-xl p-1 px-4 text-blue-500 rounded-full hover:hover:bg-blue-600 hover:text-white duration-300">International</a>
+                            <a href="#" id="domestic-link" class=" bg-slate-200 flex items-center justify-center text-xl p-1.5 px-4 text-blue-500 rounded-full hover:hover:bg-blue-600 hover:text-white duration-300">Domestic</a>
+                            <a href="#" id="international-link" class=" bg-slate-200 flex items-center justify-center text-xl p-1.5 px-4 text-blue-500 rounded-full hover:hover:bg-blue-600 hover:text-white duration-300">International</a>
                         </div>
                         <!-- Dometic starts  -->
                         <div class="flex flex-col" id="domestic">
-                            <div class="flex mt-4 items-center w-full justify-start gap-4">
-                                <div class="flex gap-1 pt-1 items-center mx-3">
-                                    <input id="radio-one-way" type="radio" name="travel-type" class="w-[25px] h-[25px] border-2 border-blue-600 text-blue-500 bg-blue-600 default:ring-blue-500" aria-labelledby="label-one-way" />
-                                    <label for="radio-one-way" id="label-one-way" class="sm:text-[21px] text-lg text-gray-900 text-nowrap">One Way</label>
+                            <div class="flex mt-4 items-center w-full justify-start gap-4 custom-radio">
+                                <div class="flex gap-1 pt-1 items-center mx-3 radio-container">
+                                    <!-- Hidden radio button and styled label -->
+                                    <input id="radio-one-way" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-one-way" />
+                                    <label for="radio-one-way" id="label-one-way" class="sm:text-[21px] text-lg text-gray-900 text-nowrap"></label>
+                                    <!-- Optional text label -->
+                                    <span class="sm:text-[21px] text-lg text-gray-900 text-nowrap">One Way</span>
                                 </div>
-                                <div class="flex  gap-1 pt-1 items-center">
-                                    <input id="radio-charter" type="radio" name="travel-type" class="w-[25px] h-[25px] border-2 border-blue-600 text-blue-500 bg-blue-600 " aria-labelledby="label-charter" />
-                                    <label for="radio-charter" id="label-charter" class="sm:text-[21px] text-lg text-gray-900">Charter</label>
+                                <div class="flex gap-1 pt-1 items-center radio-container">
+                                    <input id="radio-charter" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-charter" />
+                                    <label for="radio-charter" id="label-charter" class="sm:text-[21px] text-lg text-gray-900"></label>
+                                    <span class="sm:text-[21px] text-lg text-gray-900">Charter</span>
                                 </div>
-                                <div class="flex gap-1 pt-1 items-center">
-                                    <input id="radio-cruise" type="radio" name="travel-type" class="w-[25px] h-[25px] border-2 border-blue-600 text-blue-500 bg-blue-600 " aria-labelledby="label-cruise" />
-                                    <label for="radio-cruise" id="label-cruise" class="sm:text-[21px] text-lg text-gray-900">Cruise</label>
+                                <div class="flex gap-1 pt-1 items-center ml-4 radio-container">
+                                    <input id="radio-cruise" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-cruise" />
+                                    <label for="radio-cruise" id="label-cruise" class="sm:text-[21px] text-lg text-gray-900"></label>
+                                    <span class="sm:text-[21px] text-lg text-gray-900">Cruise</span>
                                 </div>
                             </div>
                             <!-- Domestic content -->
@@ -236,14 +286,16 @@
                 <!-- try international section here  -->
                 <div class="flex flex-col flex-wrap mt-3 items-center" id="international">
                 <!-- Initially hidden international content -->
-                <div class="flex mt-4 items-center justify-start gap-4 sm:w-[33%] w-full p-2">
-                    <div class="flex gap-1 items-center ml-1">
-                        <input id="radio-one-way-intl" type="radio" name="travel-type" class="w-[25px] h-[25px] border-2 border-blue-600 text-blue-500 bg-blue-600 default:ring-blue-500" aria-labelledby="label-one-way" />
-                        <label for="radio-one-way-intl" id="label-one-way" class="sm:text-[21px] text-lg text-gray-900 text-wrap">One Way</label>
+                <div class="flex mt-4 items-center justify-start gap-4 sm:w-[33%] w-full p-2  custom-radio">
+                    <div class="flex gap-1 items-center ml-1 radio-container">
+                        <input id="radio-one-way-intl" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-one-way" />
+                        <label for="radio-one-way-intl" id="label-one-way" class="sm:text-[21px] text-lg text-gray-900 text-wrap"></label>
+                        <span class="sm:text-[21px] text-lg text-gray-900">One Way</span>
                     </div>
-                    <div class="flex  gap-1 items-center ml-3">
-                        <input id="radio-charter-intl" type="radio" name="travel-type" class="w-[25px] h-[25px] border-2 border-blue-600 text-blue-500 bg-blue-600 " aria-labelledby="label-charter" />
-                        <label for="radio-charter-intl" id="label-charter" class="sm:text-[21px] text-lg text-gray-900">Charter</label>
+                    <div class="flex  gap-1 items-center ml-3 radio-container">
+                        <input id="radio-charter-intl" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-charter" />
+                        <label for="radio-charter-intl" id="label-charter" class="sm:text-[21px] text-lg text-gray-900"></label>
+                        <span class="sm:text-[21px] text-lg text-gray-900">Charter</span>
                     </div>
                 </div>
                 <div class="one-way-intl flex flex-col gap-5">
