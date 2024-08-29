@@ -81,8 +81,8 @@
         
                     <!-- Sign In and Create Account Buttons -->
                     <div class="p-[6px] md:gap-4 lg:gap-6 flex text-sm font-semibold">
-                        <a href="#" class="bg-white text-blue-500 p-1 px-[10px] md:px-[12px] lg:px-[14px] md:text-[12px] lg:text-[14px] rounded-md hover:bg-blue-500 hover:text-white duration-300">Sign In</a>
-                        <a href="#" class="text-white bg-blue-500 p-1 px-[10px] md:px-[12px] lg:px-[14px] md:text-[12px] lg:text-[14px] rounded-md hover:bg-blue-600 duration-300">Create New Account</a>
+                        <a href="#" class="bg-white text-blue-500 p-1 px-[10px] md:px-[12px] lg:px-[14px] md:text-[12px] lg:text-[14px] rounded-md hover:bg-[#1E98D7] hover:text-white duration-300">Sign In</a>
+                        <a href="#" class="text-white bg-[#1E98D7] p-1 px-[10px] md:px-[12px] lg:px-[14px] md:text-[12px] lg:text-[14px] rounded-md hover:bg-[#517caf] duration-300">Create New Account</a>
                     </div>
                 </div>
                 <img src="../assets/banner-shadow.png" alt="Banner Shadow" class="w-full bg-cover">
@@ -92,9 +92,9 @@
         <!-- Welcome Department of Port Administration section -->
         <section class="h-[300px] md:h-[350px] lg:h-[370px] w-full">
             <!-- Container for Text Content -->
-            <div class="w-[90%] md:w-[85%] lg:w-[1170px] h-full mx-auto flex flex-col justify-end p-4 md:p-5 lg:p-6">
-                <h1 class="text-[#21235e] text-[40px] md:text-[50px] lg:text-[62px] font-bold">Welcome</h1>
-                <h2 class="text-[#21235e] text-[20px] md:text-[30px] lg:text-[40px] font-bold">
+            <div class="w-[90%] md:w-[85%] lg:w-[1170px] h-full mx-auto flex flex-col justify-end  md:p-5 ">
+                <h1 class="text-[#21235e] text-[40px] md:text-[50px] lg:text-[60px] font-bold  translate-x-[-20px]">Welcome</h1>
+                <h2 class="text-[#21235e] text-[20px] md:text-[30px] lg:text-[40px] font-bold  translate-x-[-20px]">
                     Department of Port Administration<br/>
                     Inter-Island Ferry Services
                 </h2>
@@ -109,13 +109,13 @@
         <section class="h-auto px-4 w-full">
             <!-- <div class=" flex flex-col sm:w-[1170px] w-[100%] mx-auto"> -->
             <div class="flex flex-col sm:w-[1170px] max-w-full w-full mx-auto">
-                <h1 class="sm:my-6 my-2 mx-3 mb-8 w-full text-[21px]">Always<span class="font-bold text-blue-500"> Sign in </span> to your account to save time when booking.</h1>
+                <h1 class="sm:my-6 my-2 mb-8 w-full text-[21px]">Always<span class="font-bold text-blue-500"> Sign in </span> to your account to save time when booking.</h1>
                 <!-- Navigation tabs -->
-                <div class="grid sm:grid-cols-4 sm:m-4 m-2 gap-[1px] mb-4 sm:w-[80%] mr-[20px] lg:translate-x-[-14px]">
-                    <a href="#" id="book-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Book</a>
-                    <a href="#" id="manage-trips-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Manage Trips</a>
-                    <a href="#" id="schedule-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Schedule</a>
-                    <a href="#" id="vessel-tracking-link" class="nav-link h-[50px] bg-slate-200 flex items-center justify-center hover:underline hover:text-blue-700 sm:text-xl text-lg text-blue-600 w-full text-center">Vessel Tracking</a>
+                <div class="grid sm:grid-cols-4 sm:m-4 m-2 gap-[1px] mb-4 sm:w-[80%] mr-[20px] translate-x-[-14px]">
+                    <a href="#" id="book-link" class="nav-link h-[50px] bg-[#f2f2f2] flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Book</a>
+                    <a href="#" id="manage-trips-link" class="nav-link h-[50px] bg-[#f2f2f2] flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Manage Trips</a>
+                    <a href="#" id="schedule-link" class="nav-link h-[50px] bg-[#f2f2f2] flex items-center justify-center hover:underline hover:text-blue-700 text-xl text-blue-600 w-full">Schedule</a>
+                    <a href="#" id="vessel-tracking-link" class="nav-link h-[50px] bg-[#f2f2f2] flex items-center justify-center hover:underline hover:text-blue-700 sm:text-xl text-lg text-blue-600 w-full text-center">Vessel Tracking</a>
                 </div>
                 <!-- Main content area -->
                 <!-- book section  -->
@@ -123,29 +123,29 @@
                 <!-- Left side (radio buttons and select elements) -->
                 <div class="w-full sm:w-1/3 h-auto">
                     <div class="flex flex-col gap-4">
-                        <div class="flex gap-3 text-white mt-[40px] ">
+                        <div class="flex gap-3 text-white sm:mt-[57px] mt-[40px] ">
                             <!-- Added unique IDs for toggle functionality -->
-                            <a href="#" id="domestic-link" class=" bg-slate-200 flex items-center justify-center text-xl p-1.5 px-4 text-blue-500 rounded-full hover:hover:bg-blue-600 hover:text-white duration-300">Domestic</a>
-                            <a href="#" id="international-link" class=" bg-slate-200 flex items-center justify-center text-xl p-1.5 px-4 text-blue-500 rounded-full hover:hover:bg-blue-600 hover:text-white duration-300">International</a>
+                            <a href="#" id="domestic-link" class=" bg-[#f2f2f2] flex items-center justify-center text-[20px] p-1.5 px-4 text-blue-500 rounded-full hover:hover:bg-blue-600 hover:text-white duration-300  h-[40px] w-[128px]">Domestic</a>
+                            <a href="#" id="international-link" class=" bg-[#f2f2f2] flex items-center justify-center text-[20px] p-1.5 px-4 text-blue-500 rounded-full hover:hover:bg-blue-600 hover:text-white duration-300 h-[40px] w-[161px]">International</a>
                         </div>
                         <!-- Dometic starts  -->
                         <div class="flex flex-col" id="domestic">
-                            <div class="flex mt-4 items-center sm:w-full w-[70%s] justify-start gap-4 custom-radio">
+                            <div class="flex items-center sm:w-full w-[70%s] justify-start gap-4 custom-radio translate-x-[-14px]">
                                 <div class="flex gap-1 pt-1 items-center mx-3 radio-container">
                                     <!-- Hidden radio button and styled label -->
                                     <input id="radio-one-way" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-one-way" />
-                                    <label for="radio-one-way" id="label-one-way" class="sm:text-[21px] text-lg text-gray-900 text-nowrap"></label>
+                                    <label for="radio-one-way" id="label-one-way" class="sm:text-[20px] text-lg text-gray-900 text-nowrap"></label>
                                     <!-- Optional text label -->
                                     <span class="sm:text-[21px] text-lg text-gray-900 text-nowrap">One Way</span>
                                 </div>
                                 <div class="flex gap-1 pt-1 items-center radio-container">
                                     <input id="radio-charter" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-charter" />
-                                    <label for="radio-charter" id="label-charter" class="sm:text-[21px] text-lg text-gray-900"></label>
+                                    <label for="radio-charter" id="label-charter" class="sm:text-[20px] text-lg text-gray-900"></label>
                                     <span class="sm:text-[21px] text-lg text-gray-900">Charter</span>
                                 </div>
                                 <div class="flex gap-1 pt-1 items-center sm:ml-4 radio-container">
                                     <input id="radio-cruise" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-cruise" />
-                                    <label for="radio-cruise" id="label-cruise" class="sm:text-[21px] text-lg text-gray-900"></label>
+                                    <label for="radio-cruise" id="label-cruise" class="sm:text-[20px] text-lg text-gray-900"></label>
                                     <span class="sm:text-[21px] text-lg text-gray-900">Cruise</span>
                                 </div>
                             </div>
@@ -208,32 +208,32 @@
                 <!-- book section ends -->
                 <!-- manage section starts  -->
                 <div class="manage hidden ">
-                    <div class="sm:w-[80%] w-[100%] h-auto mt-6 flex justify-center gap-8 flex-col-2 sm:flex-row">
-                        <div class="group border-[1px] border-gray-300 flex flex-col rounded-md justify-center items-center gap-y-5 p-[15px] hover:bg-blue-500 hover:border-blue-500 duration-300 w-[160px]">
-                            <i class="fa-solid fa-ticket text-[75px] text-[#21235e] group-hover:text-white duration-300"></i>
-                            <h1 class="text-xl text-blue-500 group-hover:text-white duration-300">Check in</h1>
+                    <div class="sm:w-[80%] w-[100%] h-auto lg:mt-[59px] mt-6 flex justify-center gap-8 flex-col-2 sm:flex-row">
+                        <div class="group border-[1px] border-gray-300 flex flex-col rounded-md justify-center items-center gap-y-5 p-[15px] hover:bg-blue-500 hover:border-blue-500 duration-300 w-[161px] h-[161px]">
+                            <i class="fa-solid fa-ticket text-[60px] text-[#21235e] group-hover:text-white duration-300"></i>
+                            <h1 class="text-xl text-blue-400 group-hover:text-white duration-300">Check in</h1>
                         </div>
-                        <div class="group border-[1px] border-gray-300 flex flex-col rounded-md justify-center items-center gap-y-5 p-[15px] hover:bg-blue-500 hover:border-blue-500 duration-300 w-[160px]">
-                            <i class="fa-solid fa-suitcase text-[75px] text-[#21235e] group-hover:text-white"></i>
-                            <h1 class="text-xl text-blue-500 group-hover:text-white">My Trips</h1>
+                        <div class="group border-[1px] border-gray-300 flex flex-col rounded-md justify-center items-center gap-y-5 p-[15px] hover:bg-blue-500 hover:border-blue-500 duration-300 w-[161px] h-[161px]">
+                            <i class="fa-solid fa-suitcase text-[54px] text-[#21235e] group-hover:text-white"></i>
+                            <h1 class="text-xl text-blue-400 group-hover:text-white">My Trips</h1>
                         </div>
-                        <div class="group border-[1px] border-gray-300 flex flex-col rounded-md justify-center items-center gap-y-5 p-[15px] hover:bg-blue-500 hover:border-blue-500 duration-300 w-[160px]">
-                            <i class="fa-solid fa-receipt text-[75px] text-[#21235e] group-hover:text-white"></i>
-                            <h1 class="text-xl text-blue-500 group-hover:text-white">My Receipts</h1>
+                        <div class="group border-[1px] border-gray-300 flex flex-col rounded-md justify-center items-center gap-y-5 p-[15px] hover:bg-blue-500 hover:border-blue-500 duration-300 w-[161px] h-[161px]">
+                            <i class="fa-solid fa-receipt text-[54px] text-[#21235e] group-hover:text-white"></i>
+                            <h1 class="text-xl text-blue-400 group-hover:text-white">My Receipts</h1>
                         </div>
                     </div>
                 </div>
                 <!-- manage section ends  -->
                 <!-- schedule section starts  -->
                 <div class="Schedule hidden ">
-                    <div class=" w-[80%] h-auto mt-6 flex justify-center gap-8 flex-col-2 sm:flex-row">
+                    <div class=" w-[80%] h-auto lg:mt-[59px] mt-6 flex justify-center gap-8 flex-col-2 sm:flex-row">
                         <div class="group border-[1px] border-gray-300 flex flex-col rounded-md justify-center items-center gap-y-5 p-[15px] hover:bg-blue-500 hover:border-blue-500 duration-300 w-[160px]">
-                            <i class="fa-solid fa-ticket text-[75px] text-[#21235e] group-hover:text-white duration-300"></i>
-                            <h1 class="text-xl text-blue-500 group-hover:text-white duration-300">Check in</h1>
+                            <i class="fa-solid fa-calendar-days text-[54px] text-[#21235e] group-hover:text-white duration-300"></i>
+                            <h1 class="text-xl text-blue-400 group-hover:text-white duration-300  text-center text-[20px]">Current Sailings</h1>
                         </div>
                         <div class="group border-[1px] border-gray-300 flex flex-col rounded-md justify-center items-center gap-y-5 p-[15px] hover:bg-blue-500 hover:border-blue-500 duration-300 w-[160px]">
-                            <i class="fa-solid fa-suitcase text-[75px] text-[#21235e] group-hover:text-white"></i>
-                            <h1 class="text-xl text-blue-500 group-hover:text-white">My Trips</h1>
+                            <i class="fa-solid fa-calendar-xmark text-[54px] text-[#21235e] group-hover:text-white duration-300"></i>
+                            <h1 class="text-xl text-blue-400 group-hover:text-white duration-300 text-center text-[20px]">Past</br>Sailings</h1>
                         </div>
                     </div>
                 </div>
@@ -293,7 +293,7 @@
                 <!-- try international section here  -->
                 <div class="flex flex-col flex-wrap mt-3 items-center" id="international">
                 <!-- Initially hidden international content -->
-                <div class="flex mt-4 items-center justify-start gap-4  p-2  custom-radio">
+                <div class="flex mt-4 items-center justify-start gap-4  p-2  custom-radio translate-x-[-14px]">
                     <div class="flex gap-1 items-center ml-1 radio-container">
                         <input id="radio-one-way-intl" type="radio" name="travel-type" class="w-[25px] h-[25px]" aria-labelledby="label-one-way" />
                         <label for="radio-one-way-intl" id="label-one-way" class="sm:text-[21px] text-lg text-gray-900 text-wrap"></label>
